@@ -3,31 +3,49 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+/* div principale */
 #slider{
     height: 45vh;
     width: 80vw;
-    margin: 0 auto;
+    margin: 150px auto;
     position: relative;
     overflow: hidden;
     background-color: blue;
 }
-
+/* contenitore di immagini e titoli principali */
 .box{
     height: 100%;
     width: 100%;
     display: none;
 }
 
-.box.show{
+.title{
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: 200px;
+    font-size: x-large;
+    text-align: right;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.sub{
+    font-size: 10px;
+}
+
+.box.show, .title.show{
     display: block;
 }
 
 .box img{
     object-fit: cover;
     width: 100%;
+    height: 100%;
 }
-
+/* bottoncini di avanti e indietro */
 .fa-solid{
     z-index: 100;
     position: absolute;
@@ -52,19 +70,29 @@
     opacity: 1;
     cursor: pointer;
 }
-
+/* parte laterale */
 .aside{
     position: absolute;
+    top: 0;
     right: 0;
     height: 100%; 
-    width: 174px;
     display: flex;
     flex-flow: column;
-    align-items: flex-end;
     z-index: 99;
+}
+
+.filler{
+    height: calc(100% / 5);
+    width: 174px;
 }
 
 .aside img{
     width: 100%;
-    height: calc(100% / 5);;
+    height: 100%;
+    filter: grayscale(100%);
+}
+
+.filler.active img{
+    filter: none;
+    border: 2px solid white;
 }
