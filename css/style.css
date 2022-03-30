@@ -1,0 +1,58 @@
+#slider{
+    height: 45vh;
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: blue;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+}
+
+.box{
+    display: none;
+}
+
+.box.show{
+    display: block;
+}
+
+.box img{
+    width: 100%;
+}
+
+.fa-solid{
+    position: absolute;
+    right: 3%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.fa-angle-up{
+    top: 5%;
+}
+
+.fa-angle-down{
+    bottom: 5%;
+}
+
+.fa-angle-down:hover, .fa-angle-up:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.aside{
+    height: calc(100% / 5);
+    width: 174px;
+}
+
+.aside img{
+    width: 100%;
+    height: ;
+}
