@@ -1,3 +1,9 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 #slider{
     height: 45vh;
     width: 80vw;
@@ -5,12 +11,11 @@
     position: relative;
     overflow: hidden;
     background-color: blue;
-    display: flex;
-    flex-flow: column;
-    align-items: flex-end;
 }
 
 .box{
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
@@ -19,16 +24,17 @@
 }
 
 .box img{
+    object-fit: cover;
     width: 100%;
 }
 
 .fa-solid{
+    z-index: 100;
     position: absolute;
     right: 3%;
-    width: 20px;
-    height: 20px;
     background-color: white;
-    line-height: 20px;
+    width: 15px;
+    height: 15px;
     text-align: center;
     border-radius: 50%;
     opacity: 0.5;
@@ -48,11 +54,17 @@
 }
 
 .aside{
-    height: calc(100% / 5);
+    position: absolute;
+    right: 0;
+    height: 100%; 
     width: 174px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    z-index: 99;
 }
 
 .aside img{
     width: 100%;
-    height: ;
+    height: calc(100% / 5);;
 }

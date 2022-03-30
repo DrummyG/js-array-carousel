@@ -6,12 +6,12 @@ for (i=0; i<img.length; i++){
         <img src="${img[i]}" alt="">
     </div>`
 }
-
+const aside = document.createElement('div')
+aside.classList.add('aside')
+slider.append(aside)
 for (i=0; i<img.length; i++){
-    slider.innerHTML += `
-    <div class="aside">
-        <img src="${img[i]}" alt="">
-    </div>`
+    aside.innerHTML += `
+        <img src="${img[i]}" alt="">`
 }
 
 const box = document.getElementsByClassName('box')
